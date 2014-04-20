@@ -1,5 +1,7 @@
-Ember Todo: An rails4.1 + ember1.6.0-beta + ember-data1.0.0-beta demo
+Agile Trakcer
 ==================================
+
+A rails4.1 + ember1.6.0-beta + ember-data1.0.0-beta demo
 
 USAGE
 =====
