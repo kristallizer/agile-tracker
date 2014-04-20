@@ -2,8 +2,7 @@
   <tbody>
     {{#each tasks itemController='task'}}
       <tr>
-        <td>{{input type=checkbox checked=completed}}</td>
-        <td>{{name}}</td>
+        <td>{{input type=checkbox checked=completed}} {{name}}</td>
       </tr>
     {{/each}}
   </tbody>
