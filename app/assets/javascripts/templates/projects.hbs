@@ -3,10 +3,11 @@
     <div class="well">
       <form {{action 'createNewProject' on="submit"}}>
         <div class="form-group">
-          {{input type="text" value=newProjectName class="form-control" placeholder="New Your Project"}}
+          {{input type="text" value=newProjectName class="form-control" placeholder="Enter a project name"}}
         </div>
         <div class="form-group">
-          {{textarea  value=newProjectDescription class="form-control"}}
+          {{textarea  value=newProjectDescription class="form-control"
+            placeholder="Briefly describe your new project"}}
         </div>
         <div class="form-group">
           <button type="submit" class="btn btn-default">Create Project</button>
@@ -17,7 +18,9 @@
   {{else}}
     <header>
       {{!-- <h2>Your projects</h2> --}}
-      <button class="btn btn-default" href="javascript:;" class="pull-left" {{action 'showNewForm'}}>Create project</a>
+      <button class="btn btn-primary" href="javascript:;" class="pull-left" {{action 'showNewForm'}}>
+        <i class="fa fa-plus-square-o fa-lg"></i> Create project
+      </a>
     </header>
   {{/if}}
   <div class="top-spacer">
@@ -39,7 +42,33 @@
 </div>
 
 <div class="col-md-6">
-  <h2 class="no-top-margin">My Open Tasks</h2>
+  <h2 class="dboard-col2-header">My Open Tasks</h2>
+  <table class="table">
+    <tbody>
+      {{#each controller}}
+        {{#each tasks itemController='task'}}
+          {{#unless completed}}
+            <tr>
+              <td>
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    {{name}}
+                    <p class="pull-right">
+                      <b>{{project.name}}</b>
+                    </p>
+                  </div>
+                  <div class="panel-body">
+                    Tester
+                  </div>
+                </div>
+              </td>
+            </tr>
+          {{/unless}}
+        {{/each}}
+      {{/each}}
+    </tbody>
+  </table>
+
 </div>
 
 {{!-- <table class="table">
