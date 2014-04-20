@@ -16,6 +16,7 @@ gem 'twitter-bootswatch-rails-fontawesome', :git => 'git://github.com/scottvrose
 
 
 gem 'ember-rails'
+gem 'ember-source', '1.5.0'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -41,7 +42,7 @@ group :doc do
 end
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'bcrypt-ruby', '~> 3.0.0'
 
 # Use unicorn as the app server
 # gem 'unicorn'
