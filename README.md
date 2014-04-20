@@ -1,9 +1,5 @@
-Ember Todo: An rails4 + ember1.0 + ember-data1.0 demo
+Ember Todo: An rails4.1 + ember1.6.0-beta + ember-data1.0.0-beta demo
 ==================================
-
-- The coffeescript-less version!
-- Forked from https://github.com/FeipingHunag/ember-todo
-- Live demo <http://ember-todo.herokuapp.com>
 
 USAGE
 =====
@@ -17,3 +13,6 @@ Run:
 Visit the webserver at:
 
     http://localhost:3000
+
+
+- Originally forked from https://github.com/FeipingHunag/ember-todo
