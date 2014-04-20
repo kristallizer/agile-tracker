@@ -23,6 +23,6 @@
 // for more details see: http://emberjs.com/guides/application/
 EmberTodo = Ember.Application.create();
 
-//= require_tree .
+
 
 
