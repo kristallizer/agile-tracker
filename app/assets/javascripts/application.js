@@ -18,6 +18,7 @@
 //= require ember-data
 //= require_self
 //= require ember_todo
+//= require jquery-cookie
 
 
 // for more details see: http://emberjs.com/guides/application/

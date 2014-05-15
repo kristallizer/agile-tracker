@@ -1,0 +1,42 @@
+<h2>Register</h2>
+
+<form class="form-horizontal" {{action "createUser" on="submit"}}>
+  <div class="control-group" {{bind-attr class=":controls errors.name:error"}}>
+    <label class="control-label">Full Name</label>
+    <div class="controls">
+      {{input type="text" value=name placeholder="Full Name" class="input-small"}}
+    </div>
+  </div>
+
+  <div class="control-group" {{bind-attr class=":controls errors.name:error"}}>
+    <label class="control-label">Email Address</label>
+    <div class="controls">
+    {{input type="email" value=email placeholder="Email Address" class="input-small"  }}
+    </div>
+  </div>
+
+  <div class="control-group" {{bind-attr class=":controls errors.name:error"}}>
+    <label class="control-label">Username</label>
+    <div class="controls">
+      {{input type="text" value=username placeholder="Username" class="input-small"}}
+    </div>
+  </div>
+
+  <div class="control-group" {{bind-attr class=":controls errors.name:error"}}>
+    <label class="control-label">Password</label>
+    <div class="controls">
+    {{input type="password" value=password placeholder="Password" class="input-small" }}
+    </div>
+  </div>
+
+  <div class="control-group" {{bind-attr class=":controls errors.name:error"}}>
+    <label class="control-label">Confirm Password</label>
+    <div class="controls">
+    {{input type="password" value=password_confirmation placeholder="Confirm password" class="input-small"}}
+    </div>
+  </div>
+
+  <br>
+  <button type="submit">Submit</button>
+
+</form>

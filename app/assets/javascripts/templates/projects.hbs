@@ -27,14 +27,19 @@
     <table class="table">
       <tbody>
         {{#each controller}}
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              {{#link-to 'project' this}} {{name}} {{/link-to}}
-            </div>
-            <div class="panel-body">
-              {{description}}
-            </div>
-          </div>
+          <tr>
+            <td>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  {{#link-to 'project' this}} {{name}} {{/link-to}}
+                  <button class="btn-small btn-danger pull-right" {{action "deleteProject" this}}>Delete</button>
+                </div>
+                <div class="panel-body">
+                  {{description}}
+                </div>
+              </div>
+            </td>
+          </tr>
         {{/each}}
       </tbody>
     </table>
@@ -56,9 +61,6 @@
                     <p class="pull-right">
                       <b>{{project.name}}</b>
                     </p>
-                  </div>
-                  <div class="panel-body">
-                    Tester
                   </div>
                 </div>
               </td>

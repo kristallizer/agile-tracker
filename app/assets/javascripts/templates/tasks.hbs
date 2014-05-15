@@ -1,10 +1,12 @@
 <table class="table" id="task-list">
-  {{#each tasks itemController='task'}}
-    <tr>
-      <td>
-        {{input type=checkbox checked=completed}}
-        <label {{bind-attr class="completed:completed"}}>{{name}}</label>
-      </td>
-    </tr>
-  {{/each}}
+  <tbody>
+    {{#each tasks itemController='task'}}
+      <tr>
+        <td>
+          {{input type=checkbox checked=completed}}
+          <label {{bind-attr class="completed:completed"}}>{{name}}</label>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
 </table>

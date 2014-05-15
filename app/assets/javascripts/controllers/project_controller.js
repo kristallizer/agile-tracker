@@ -12,6 +12,14 @@ EmberTodo.ProjectController = Ember.ObjectController.extend({
         _this.content.get('tasks').pushObject(model);
         return _this.set('newTask', '');
       });
+    },
+
+    deleteProject: function() {
+      var project = this.get('model');
+      project.then(function() {
+        project.deleteRecord();
+        project.save();
+      })
     }
   }
 });

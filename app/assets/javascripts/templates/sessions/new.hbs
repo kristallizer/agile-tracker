@@ -1,0 +1,14 @@
+<h2>Login</h2>
+
+<form class="form-horizontal" {{action "loginUser" on="submit"}}>
+  <div class="control-group">
+    {{input type="text" value=username_or_email placeholder="Username or Email Address"}}
+  </div>
+
+  <div class="control-group">
+    {{input type="password" value=password placeholder="Password"}}
+  </div>
+
+  <br>
+  <button type="submit">Submit</button>
+</form>

@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
   def current_user
     api_key = ApiKey.active.where(access_token: token).first
     if api_key
-      return api_key.user
+      @current_user ||= api_key.user
     else
       return nil
     end

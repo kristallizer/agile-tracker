@@ -4,8 +4,5 @@
 //= require_tree ./views
 //= require_tree ./templates
 //= require_tree ./routes
-//= require ./router
+//= require_tree ./config
 //= require_self
-
-
-

@@ -3,21 +3,23 @@
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">AgileTrack</a>
+      <a class="navbar-brand" href="#">TodoTrack</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        {{#link-to "projects" tagName="li"}}
-          {{#link-to "projects"}}Projects{{/link-to}}
-        {{/link-to}}
+        <li>{{#link-to "projects"}}Projects{{/link-to}}</li>
+
+        {{#if isAuthenticated}}
+          {{!-- <li><a href="#">{{currentUser.email}}</a></li> --}}
+          <li><a href="#">{{currentUser}}</a></li>
+          <li><a href="#" {{action 'logout'}}>Logout</a></li>
+        {{else}}
+          <li>{{#link-to 'users.new'}}Register{{/link-to}}</li>
+          <li>{{#link-to 'sessions.new'}}Login{{/link-to}}</li>
+        {{/if}}
+
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

@@ -1,4 +1,5 @@
 class ProjectsController < ApplicationController
+  # before_filter :ensure_authenticated_user, except: [:index, :new, :create]
   before_action :set_project, only: [:show, :edit, :update, :destroy]
 
   # GET /projects
