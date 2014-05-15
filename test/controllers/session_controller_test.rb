@@ -10,8 +10,8 @@ class SessionControllerTest < ActionController::TestCase
                          password_confirmation: pw)
     post 'create', { username_or_email: larry.username, password: pw }
     results = JSON.parse(response.body)
-    assert_results['api_key']['access_token'] =~ /\S{32}/
-    assert_results['api_key']['user_id'] == larry.id
+    assert results['api_key']['access_token'] =~ /\S{32}/
+    assert results['api_key']['user_id'] == larry.id
   end
 
   test "authenticate with email" do
